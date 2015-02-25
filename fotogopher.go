@@ -182,6 +182,6 @@ func main() {
 		fmt.Fprintf(w, help_page)
 	})
 	http.HandleFunc("/snapshot", snapshotHandler)
-	log.Print("Server started")
 	log.Fatal(http.ListenAndServe(*addr, nil))
+	log.Println("Server started")
 }
